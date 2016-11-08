@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Reversi">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Reversi Game/Reversi/dist/Reversi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
