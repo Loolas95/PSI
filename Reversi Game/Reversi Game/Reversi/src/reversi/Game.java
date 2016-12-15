@@ -28,7 +28,8 @@ public class Game extends JFrame{
         // center the jframe on screen
         setLocationRelativeTo(null);
 
-                add(gui, BorderLayout.CENTER);
+        gui = new GUI();
+        add(gui, BorderLayout.CENTER);
 
         setSize(800, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
