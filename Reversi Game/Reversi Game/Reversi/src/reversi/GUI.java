@@ -225,7 +225,7 @@ public class GUI extends JPanel{
                         ct = board.play(xCor, yCor);
                         if(ct == 0 || ct == -1)
                         {
-                            
+                            board.play();
                             reversiArrayList.add(new Reversi(board));
                             ArrayList <Integer> arrList = new ArrayList <Integer>();
                             int k=0;
@@ -273,7 +273,26 @@ public class GUI extends JPanel{
                     }
 
                 }
-                
+                int st = board.endGame();
+                if(st == 0)
+                {
+                    if(playerScore > pcScore)
+                        JOptionPane.showMessageDialog(null,"No legal move!\nPlayer Win!","Game Over",JOptionPane.PLAIN_MESSAGE);   
+                    else
+                        JOptionPane.showMessageDialog(null,"No legal move!\nComputer Win!","Game Over",JOptionPane.PLAIN_MESSAGE);
+                }
+                else if(st == 1 || st == 3)
+                {
+                    JOptionPane.showMessageDialog(null,"Computer Win!","Game Over",JOptionPane.PLAIN_MESSAGE);
+                }
+                else if(st == 2 || st == 4)
+                {
+                    JOptionPane.showMessageDialog(null,"Player Win!","Game Over",JOptionPane.PLAIN_MESSAGE); 
+                }
+                else if(st == 5)
+                {
+                    JOptionPane.showMessageDialog(null,"Scoreless!","Game Over",JOptionPane.PLAIN_MESSAGE); 
+                }
             }
         }
         
